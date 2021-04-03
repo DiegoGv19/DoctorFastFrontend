@@ -11,7 +11,7 @@ export class Doctor {
     tarifa: boolean
     usuario: User;
     especialidad: Speciality;
-
+    
     constructor(){
         this.idDoctor = 0;
         this.dniFoto = "";

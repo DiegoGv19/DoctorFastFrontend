@@ -4,7 +4,7 @@
     <div >
         <form class="form-group">
             <label for="distric">Select distric</label>
-            <select class="form-control" id="distric"  [(ngModel)]="rankingSelect">
+            <select class="form-control" id="distric"  [(ngModel)]="rankingSelect" name="rankingSelect">
                 <option value="" selected disabled hidden>Choose here</option>
                 <option *ngFor="let ranking of rankingsList" [value]="ranking">{{ranking}}</option>
             </select>
@@ -12,6 +12,6 @@
         </form>
     </div>
 
-    <app-body-table-doctor [doctorsList]="doctorsList"></app-body-table-doctor>
+    <app-body-table-filter-doctor [doctorsList]="doctorsList"></app-body-table-filter-doctor>
 
 </div>

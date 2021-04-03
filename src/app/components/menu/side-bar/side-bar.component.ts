@@ -25,7 +25,7 @@ export class SideBarComponent implements OnInit {
   public logout()
   {
     this.loginService.clearAll();
-    localStorage.setItem("admin", "");
+    localStorage.setItem("admin", "{}");
     this.router.navigateByUrl("");
   }
 

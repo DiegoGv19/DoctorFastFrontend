@@ -18,6 +18,7 @@ import { ViewDoctorComponent } from './pages/doctorPages/view-doctor/view-doctor
 import { ListDoctorsByDistricComponent } from './pages/doctorPages/list-doctors-by-distric/list-doctors-by-distric.component';
 import { ListDoctorsByRankingComponent } from './pages/doctorPages/list-doctors-by-ranking/list-doctors-by-ranking.component';
 import { HeaderComponent } from './components/menu/header/header.component';
+import { BodyTableFilterDoctorComponent } from './components/doctor/body-table-filter-doctor/body-table-filter-doctor.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { HeaderComponent } from './components/menu/header/header.component';
     HeaderComponent,
     BodyTableDoctorComponent,
     DoctorComponent,
+    BodyTableFilterDoctorComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@ export class DistricService {
   private districsList: Array<string> = new Array<string>();
   
   constructor() { 
-    this.districsList.push("Chorrillos","Callao")
+    this.districsList.push("Chorrillos","Callao", "Pueblo Libre", "Ate", "San Borja")
   }
   public getDistricsList(): Array<string>
   {

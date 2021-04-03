@@ -12,6 +12,8 @@ import { LoginService } from 'src/app/services/login/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  public notFound: boolean = true;
+  private admin: Admin = new Admin();
   public formLogin: FormGroup;
   constructor(private loginService: LoginService, private formBuilder: FormBuilder, private router: Router) { 
     this.formLogin = this.formBuilder.group({});
@@ -19,6 +21,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.isLogin();
   }
 
   public createForm()
@@ -27,6 +30,16 @@ export class LoginComponent implements OnInit {
       username: ["", Validators.required],
       password: ["", Validators.required]
     });  
+  }
+
+  private isLogin()
+  {
+    let admin = JSON.parse( localStorage.getItem("admin" ) || '{}');
+    this.admin = admin == '{}' ?  new Admin : admin;
+    this.loginService.createAdmin(this.admin);
+    if(!this.loginService.isLogin()) {
+      this.router.navigateByUrl("doctor");
+    }
   }
 
   private saveAdminInformatio(admin: Admin) 
@@ -38,11 +51,18 @@ export class LoginComponent implements OnInit {
 
   public Startlogin()
   {
-    this.loginService.login(this.formLogin.value as Login).subscribe((request) => {
-      if(request.authorities[0].authority === "ROLE_ADMINISTRADOR" && request.token !== "") {
-         this.saveAdminInformatio(request);
-      }
-    })
+    this.loginService.login(this.formLogin.value as Login).subscribe(
+      
+      (request) => {
+        if(request.authorities[0].authority === "ROLE_ADMINISTRADOR" && request.token !== "") {
+          this.saveAdminInformatio(request);
+          this.notFound = true;
+        }
+      },
+      error => {
+        this.notFound = false;
+      },
+    )
   }
 
 }
