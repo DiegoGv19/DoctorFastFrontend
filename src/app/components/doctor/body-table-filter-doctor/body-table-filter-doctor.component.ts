@@ -19,6 +19,6 @@ export class BodyTableFilterDoctorComponent implements OnInit {
   viewDoctor(doctor:Doctor)
   {
     this.doctorService.setDoctor(doctor);
-    this.routes.navigateByUrl('doctor/perfil');
+    this.routes.navigateByUrl('admin/doctor/perfil');
   }
 }

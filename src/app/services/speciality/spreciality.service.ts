@@ -10,12 +10,12 @@ import { LoginService } from '../login/login.service';
 })
 export class SpecialityService {
 
-  private urlFindEspecialty: string = "admin/especialidades";
+  private urlFindEspecialty: string = "especialidades";
   
   constructor(private apiService: ApiService, private loginService: LoginService, private http: HttpClient) { }
 
   findSpecialityList(): Observable<Speciality[]>
   {
-    return this.http.get<Speciality[]>(`${this.apiService.getUrl()}/${this.urlFindEspecialty}`, {headers: this.loginService.getHttpOptions()});
+    return this.http.get<Speciality[]>(`${this.apiService.getUrlAdmin()}/${this.urlFindEspecialty}`, {headers: this.loginService.getHttpOptions()});
   } 
 }

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Doctor } from './model/doctor';
+import { AdminComponent } from './pages/admin/admin.component';
+import { DashboardComponent } from './pages/adminPage/dashboard/dashboard.component';
 import { DoctorComponent } from './pages/doctor/doctor.component';
 import { EditDoctorComponent } from './pages/doctorPages/edit-doctor/edit-doctor.component';
 import { ListDoctorsByDistricComponent } from './pages/doctorPages/list-doctors-by-distric/list-doctors-by-distric.component';
@@ -13,25 +15,37 @@ const routes: Routes = [
   {
     path: '', component: LoginComponent
   },
+
   {
-    path: 'doctor', component: DoctorComponent, children: [
+    path: 'admin', component: AdminComponent, children: [
       {
-        path: 'list', component: ListDoctorsComponent
+        path: '', component: DashboardComponent
       },
       {
-        path: 'list-by-district', component: ListDoctorsByDistricComponent
+        path: 'dashboard', redirectTo: ''
       },
       {
-        path: 'list-by-ranking', component: ListDoctorsByRankingComponent
-      },
-      {
-        path: 'perfil', component: ViewDoctorComponent
-      },
-      {
-        path: 'edit', component: EditDoctorComponent
+        path: 'doctor', component: DoctorComponent, children: [
+          {
+            path: 'list', component: ListDoctorsComponent
+          },
+          {
+            path: 'list-by-district', component: ListDoctorsByDistricComponent
+          },
+          {
+            path: 'list-by-ranking', component: ListDoctorsByRankingComponent
+          },
+          {
+            path: 'perfil', component: ViewDoctorComponent
+          },
+          {
+            path: 'edit', component: EditDoctorComponent
+          }
+          
+        ]
       }
-      
     ]
+    
   }
 
 ];

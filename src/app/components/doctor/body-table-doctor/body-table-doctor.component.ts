@@ -23,12 +23,12 @@ export class BodyTableDoctorComponent implements OnInit {
   viewDoctor(doctor:Doctor)
   {
     this.doctorService.setDoctor(doctor);
-    this.routes.navigateByUrl('doctor/perfil');
+    this.routes.navigateByUrl('admin/doctor/perfil');
   }
 
   editDoctor(doctor:Doctor)
   {
     this.doctorService.setDoctor(doctor);
-    this.routes.navigateByUrl('doctor/edit');
+    this.routes.navigateByUrl('admin/doctor/edit');
   }
 }

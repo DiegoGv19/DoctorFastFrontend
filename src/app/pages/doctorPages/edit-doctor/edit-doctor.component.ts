@@ -109,7 +109,7 @@ export class EditDoctorComponent implements OnInit {
     })
 
     this.doctorService.clearDoctor();
-    this.router.navigateByUrl('doctor/list');
+    this.router.navigateByUrl('admin/doctor/list');
   }
   
 }

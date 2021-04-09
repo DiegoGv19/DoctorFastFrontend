@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
     this.admin = admin == '{}' ?  new Admin : admin;
     this.loginService.createAdmin(this.admin);
     if(!this.loginService.isLogin()) {
-      this.router.navigateByUrl("doctor");
+      this.router.navigateByUrl("admin");
     }
   }
 
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
   {
     this.loginService.createAdmin(admin);
     localStorage.setItem("admin", JSON.stringify(admin));
-    this.router.navigateByUrl("doctor");
+    this.router.navigateByUrl("admin");
   }
 
   public Startlogin()
