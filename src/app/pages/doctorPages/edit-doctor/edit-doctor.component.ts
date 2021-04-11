@@ -44,7 +44,7 @@ export class EditDoctorComponent implements OnInit {
 
   ngOnInit(): void {
     if(this.doctorService.getDoctor().idDoctor == 0 ) {
-      this.router.navigateByUrl('list-doctors');
+      this.router.navigateByUrl('admin/doctor/list');
     }
 
     this.data = this.doctorService.getDoctor();

@@ -1,0 +1,7 @@
+.admin-layout {
+    width: 100vw;
+    @media screen and (min-width: 800px) {
+        display: grid;
+        grid-template-columns: 264px calc(100% - 264px);
+    }
+}

@@ -40,9 +40,14 @@ export class StarComponent implements OnInit {
       if(this.n < 5) {
         this.stars[this.n].setAttribute('style', `left: calc(-1 * calc(100% - ${this.m}%));`)
       }
-      
     }
     
+    else {
+      this.stars = Array.from(document.querySelectorAll(`#paint-${this.id}`));
+      for (let _i = 0; _i < 5; _i++) {
+        this.stars[_i].classList.remove('paint');
+      }
+    } 
   }
   
 

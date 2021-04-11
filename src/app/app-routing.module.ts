@@ -8,6 +8,7 @@ import { EditDoctorComponent } from './pages/doctorPages/edit-doctor/edit-doctor
 import { ListDoctorsByDistricComponent } from './pages/doctorPages/list-doctors-by-distric/list-doctors-by-distric.component';
 import { ListDoctorsByRankingComponent } from './pages/doctorPages/list-doctors-by-ranking/list-doctors-by-ranking.component';
 import { ListDoctorsComponent } from './pages/doctorPages/list-doctors/list-doctors.component';
+import { ViewDoctorRankingComponent } from './pages/doctorPages/view-doctor-ranking/view-doctor-ranking.component';
 import { ViewDoctorComponent } from './pages/doctorPages/view-doctor/view-doctor.component';
 import { LoginComponent } from './pages/login/login.component';
 
@@ -37,6 +38,9 @@ const routes: Routes = [
           },
           {
             path: 'perfil', component: ViewDoctorComponent
+          },
+          {
+            path: 'perfil/ranking', component: ViewDoctorRankingComponent
           },
           {
             path: 'edit', component: EditDoctorComponent

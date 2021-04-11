@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Doctor } from 'src/app/model/doctor';
+import { DoctorRanking } from 'src/app/model/doctorRanking';
 import { DoctorService } from 'src/app/services/doctor/doctor.service';
 import { RankingService } from 'src/app/services/ranking/ranking.service';
 
@@ -10,14 +11,14 @@ import { RankingService } from 'src/app/services/ranking/ranking.service';
 })
 export class ListDoctorsByRankingComponent implements OnInit {
   
-  doctorsList: Array<Doctor> = new Array<Doctor>();
+  doctorsList: Array<DoctorRanking> = new Array<DoctorRanking>();
   rankingsList: Array<number> = new Array<number>(); 
   rankingSelect: number = 0;
 
   constructor(private doctorService: DoctorService, private rankingService: RankingService) { }
 
   ngOnInit(): void {
-    this.doctorService.findDoctors().subscribe((doctorsRequest)=>{
+    this.doctorService.findDoctorByRanking(this.rankingSelect).subscribe((doctorsRequest) => {
       this.doctorsList = doctorsRequest;
     });
     this.rankingsList = this.rankingService.getRankingList();

@@ -5,7 +5,7 @@
         <th scope="col">Apellido P.</th>
         <th scope="col">Apellido M.</th>
         <th scope="col">DNI</th>
-        <th scope="col" class="delete-with-responsive">Acceso</th>
+        <th scope="col">Ranking</th>
         <th scope="col" class="delete-with-responsive">Ver</th>
     </tr>
     </thead>
@@ -15,7 +15,7 @@
             <td>{{doctor.usuario.apellidoPaterno}}</td>
             <td>{{doctor.usuario.apellidoMaterno}}</td>
             <td>{{doctor.usuario.dni}}</td>
-            <td>{{doctor.usuario.distrito}}</td>
+            <td>{{doctor.rating}}</td>
             <td class="delete-with-responsive">
                 <a type="button" class="btn btn-primary btn-image-center" (click)="viewDoctor(doctor)">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">

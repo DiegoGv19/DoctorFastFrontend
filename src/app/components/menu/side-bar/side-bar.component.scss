@@ -1,3 +1,5 @@
+$color-text-white: #fff;
+
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
@@ -151,4 +153,32 @@ a[data-toggle="collapse"] {
         top: 50%;
         left: 4%;
     }
+}
+
+.sidebar-logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
+    width: 264px;
+    &-title {
+        margin-left: 10px;
+        color: $color-text-white;
+        font-size: 18px;
+        font-weight: 100;
+        margin-bottom: 0;
+    }
+
+    &-image {
+        border-radius: 8px;
+        background-image: linear-gradient(-135deg, rgb(29, 233, 182) 0%, rgb(29, 196, 233) 100%);
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
 }

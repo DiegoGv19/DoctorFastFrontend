@@ -1,0 +1,17 @@
+$color-main: #f4f7fa;
+
+.edit-doctor-data {
+    background: $color-main;
+    display: flex;
+    padding: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: center;
+    & p {
+        margin: 0 !important;
+        align-self: center;
+    }
+}
+

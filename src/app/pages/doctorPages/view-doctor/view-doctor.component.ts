@@ -10,16 +10,8 @@ import { DoctorService } from 'src/app/services/doctor/doctor.service';
 })
 export class ViewDoctorComponent implements OnInit {
 
-  data: Doctor = this.doctor.getDoctor();
-  verification: boolean = this.data.habilitado;
-  constructor(private doctor: DoctorService, private routes: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
-    if(this.data.idDoctor == 0) {
-      this.routes.navigateByUrl('list-doctors');
-    }
-    
-
   }
-
 }

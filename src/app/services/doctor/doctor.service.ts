@@ -59,9 +59,9 @@ export class DoctorService {
     return this.http.get<Doctor[]>(`${this.apiService.getUrlAdmin()}/${this.urlFindDoctorListByDistrict}${distric}`, {headers: this.loginService.getHttpOptions()});
   }
 
-  findDoctorByRanking(ranking: number): Observable<Doctor[]>
+  findDoctorByRanking(ranking: number): Observable<DoctorRanking[]>
   {
-    return this.http.get<Doctor[]>(`${this.apiService.getUrlAdmin()}/${this.urlFindDoctorListByRanking}/${ranking}`, {headers: this.loginService.getHttpOptions()});
+    return this.http.get<DoctorRanking[]>(`${this.apiService.getUrlAdmin()}/${this.urlFindDoctorListByRanking}/${ranking}`, {headers: this.loginService.getHttpOptions()});
   }
 
   findFiveBestDoctors(): Observable<DoctorRanking[]>

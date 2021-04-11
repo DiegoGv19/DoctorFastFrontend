@@ -24,6 +24,10 @@ import { DashboardComponent } from './pages/adminPage/dashboard/dashboard.compon
 import { AdminComponent } from './pages/admin/admin.component';
 import { FiveBestDoctorsComponent } from './components/admin/five-best-doctors/five-best-doctors.component';
 import { StarComponent } from './components/admin/star/star.component';
+import { BodyTableFilterRankingComponent } from './components/doctor/body-table-filter-ranking/body-table-filter-ranking.component';
+import { ViewDoctorRankingComponent } from './pages/doctorPages/view-doctor-ranking/view-doctor-ranking.component';
+import { ViewDoctorDataComponent } from './components/doctor/view-doctor-data/view-doctor-data.component';
+import { DoctorRankingStatisticsComponent } from './components/doctor/doctor-ranking-statistics/doctor-ranking-statistics.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,10 @@ import { StarComponent } from './components/admin/star/star.component';
     AdminComponent,
     FiveBestDoctorsComponent,
     StarComponent,
+    BodyTableFilterRankingComponent,
+    ViewDoctorRankingComponent,
+    ViewDoctorDataComponent,
+    DoctorRankingStatisticsComponent,
   ],
   imports: [
     BrowserModule,
