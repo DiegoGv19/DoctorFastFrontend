@@ -19,7 +19,8 @@ a:focus {
 }
 
 #sidebar {
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
     min-width: 264px;
     max-width: 264px;
     background: #3f4d67;
@@ -33,6 +34,11 @@ a:focus {
     }
 }
 
+.sidebar-aux {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
 
 .noMoveMenu{
     transform: translateX(-100%);
