@@ -16,6 +16,6 @@ export class SpecialityService {
 
   findSpecialityList(): Observable<Speciality[]>
   {
-    return this.http.get<Speciality[]>(`${this.apiService.getUrlAdmin()}/${this.urlFindEspecialty}`, {headers: this.loginService.getHttpOptions()});
+    return this.http.get<Speciality[]>(`${this.apiService.getUrlAdmin()}/${this.urlFindEspecialty}`);
   } 
 }
